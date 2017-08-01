@@ -2,5 +2,5 @@
   publish = "public"
   command = "hugo --theme docdock"
 
-[context.environment]
+[build.environment]
   HUGO_VERSION = "0.25.1"
