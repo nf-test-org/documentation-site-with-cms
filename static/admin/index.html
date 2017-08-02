@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@~0.4/dist/cms.css" />
+
+</head>
+<body>
+  <script src="https://unpkg.com/netlify-cms@~0.4/dist/cms.js"></script>
+
+  <script>
+    var PagePreview = createClass({
+      render() {
+        var data = this.props.entry.toJS()['data'];
+
+        return h("section", {id: "body"},
+          h("div", {id: "overlay"}),
+          h("div", {className: "padding highlightable"},
+            h("div", {id: "top-bar", style: {margin: "0.5rem 0 2rem"}},
+              h("div", {id: "breadcrumbs"},
+                h("span", {id: "toc-menu"}, h("i", {className: "fa fa-list-alt"})),
+                h("span", {className: "link"},
+                  h("a", {href: "#", className: "highlight"}, "My Documentation Site"), " > ",
+                  h("a", {href: "#", className: "highlight"}, "Jamstack-sites"), " > ",
+                  h("span", {}, data.title)
+                )
+              )
+            ),
+            h("div", {id: "body-inner"}, this.props.widgetFor('body'))
+          )
+        );
+      }
+    });
+
+    CMS.registerPreviewStyle("/css/nucleus.css");
+    CMS.registerPreviewStyle("/css/font-awesome.min.css");
+    CMS.registerPreviewStyle("/css/hybrid.css");
+    CMS.registerPreviewStyle("/css/featherlight.min.css");
+    CMS.registerPreviewStyle("/css/horsey.css");
+    CMS.registerPreviewStyle("/css/theme.css");
+    CMS.registerPreviewStyle("/css/bootstrap.min.css");
+
+    CMS.registerPreviewTemplate("docs", PagePreview);
+    CMS.registerPreviewTemplate("home", PagePreview);
+
+  </script>
+</body>
+</html>

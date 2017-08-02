@@ -1,5 +1,6 @@
 ---
 title: Entire Project on a CDN
+type: slide
 ---
 
 ## Entire Project on a CDN

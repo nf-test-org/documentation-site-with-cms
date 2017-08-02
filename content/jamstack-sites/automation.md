@@ -1,5 +1,6 @@
 ---
 title: All Automated
+type: page
 ---
 
 ## Automated Builds
