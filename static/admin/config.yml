@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: nf-test-org/documentation-site-with-cms
+  repo: nf-test-org/doc-site-with-cms
 
 publish_mode: editorial_workflow
 
