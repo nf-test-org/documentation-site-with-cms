@@ -1,5 +1,5 @@
 ---
-title: Entire Project on a CDN
+title: Firebreathing Dragon
 ---
 
 ## Entire Project on a CDN
@@ -13,3 +13,4 @@ With a JAMstack project, anyone should be able to do a `git clone` , install any
 ## Modern Build Tools
 
 Take advantage of the world of modern build tools. It can be a jungle to get oriented in and it's a fast moving space, but you'll want to be able to use tomorrow's web standards today without waiting for tomorrow's browsers. And that currently means, Babel, PostCSS, Webpack, and friends.
+
